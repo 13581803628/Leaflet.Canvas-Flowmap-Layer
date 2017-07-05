@@ -104,29 +104,27 @@ canvas贝塞尔曲线和运动的贝塞尔曲线的默认样式可以通过 `can
 
 ## API
 
-This extends the LeafletJS v1 [`L.GeoJSON` layer](http://leafletjs.com/reference-1.0.3.html#geojson). All properties, methods, and events provided by the `L.GeoJSON` layer are available in the `Leaflet.CanvasFlowmapLayer`, with additional custom features described below.
+继承于 Leaflet v1 [`L.GeoJSON` layer](http://leafletjs.com/reference-1.0.3.html#geojson)。 `L.GeoJSON`层提供的所有属性、方法和事件都可以在`Leaflet.CanvasFlowmapLayer` 中适用，还具有下面描述的其他自定义功能。
 
 ### 构造函数概要
 
 ```javascript
 var geoJsonFeatureCollection = {
-  // collection of GeoJSON point features
-  // with origin and destination attribute properties
+  // 具有起止点属性信息的GeoJSON 点元素集合
 
-  // see discussion above, demos, and CSV example data sources
+  // 请参阅上面的讨论，演示和CSV示例数据源
 };
 
 var exampleFlowmapLayer = L.canvasFlowmapLayer(geoJsonFeatureCollection, {
-  // required property for this custom layer,
-  // which relies on the property names of your own data
+  // 此自定义图层的必需属性，
+  // 它依赖于你自己的数据的属性名称
   originAndDestinationFieldIds: {
-    // all kinds of important stuff here...see docs below
+    // 这里是最重要的配置信息...查看下面的文档说明
 
-    // however, this isn't required if your own data
-    // is in the same format as the layer source code
+    // 然而，如果你的数据和源代码要求的数据格式相同，这个选项就不是必须的
   },
 
-  // some custom options
+  // 一些自定义选项
   pathDisplayMode: 'selection',
   animationStarted: true,
   animationEasingFamily: 'Cubic',
@@ -147,7 +145,7 @@ var exampleFlowmapLayer = L.canvasFlowmapLayer(geoJsonFeatureCollection, {
         <td><code>originAndDestinationFieldIds</code></td>
         <td><code>Object</code></td>
         <td>
-            <strong>如果你的数据与图层源代码不具有相同的属性字段名称，则为必需。</strong> <br> 此对象告诉图层你唯一的起始和目标属性（字段）。起止点都需要拥有自己唯一的ID属性和几何定义。<a href="#originAndDestinationFieldIds示例代码">查看下面的示例代码</a>,其中包括最低要求的对象属性。
+            <strong>如果你的数据与图层源代码不具有相同的属性字段名称，则为必需。</strong> <br> 此对象告诉图层你唯一的起始和目标属性（字段）。起止点都需要拥有自己唯一的ID属性和几何定义。<a href="#originAndDestinationFieldIds-示例代码">查看下面的示例代码</a>,其中包括最低要求的对象属性。
         </td>
     </tr>
     <tr>
@@ -155,7 +153,7 @@ var exampleFlowmapLayer = L.canvasFlowmapLayer(geoJsonFeatureCollection, {
         <td><code>Function</code></td>
         <td>
             <strong>可选</strong> <br>
-            此函数定义了起止点的符号样式属性。参见<a href="#style示例代码">下面的示例代码</a>
+            此函数定义了起止点的符号样式属性。参见<a href="#style-示例代码">下面的示例代码</a>
         </td>
     </tr>
     <tr>
