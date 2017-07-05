@@ -145,7 +145,7 @@ var exampleFlowmapLayer = L.canvasFlowmapLayer(geoJsonFeatureCollection, {
         <td><code>originAndDestinationFieldIds</code></td>
         <td><code>Object</code></td>
         <td>
-            <strong>如果你的数据与图层源代码不具有相同的属性字段名称，则为必需。</strong> <br> 此对象告诉图层你唯一的起始和目标属性（字段）。起止点都需要拥有自己唯一的ID属性和几何定义。<a href="#originanddestinationfieldIds-示例代码">查看下面的示例代码</a>,其中包括最低要求的对象属性。
+            <strong>如果你的数据与图层源代码不具有相同的属性字段名称，则为必需。</strong> <br> 此对象告诉图层你唯一的起始和目标属性（字段）。起止点都需要拥有自己唯一的ID属性和几何定义。<a href="##originanddestinationfieldids-示例代码">查看下面的示例代码</a>,其中包括最低要求的对象属性。
         </td>
     </tr>
     <tr>
